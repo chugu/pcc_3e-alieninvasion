@@ -37,14 +37,14 @@ class AlienInvasion:
 
     def _update_bullets(self):
             """Update position and get rid of old bullets"""
-            #update bullets positions
+            # update bullets positions
             self.bullets.update()
 
-            #Get rid of bullets that have disappeard
+            # Get rid of bullets that have disappeard
             for bullet in self.bullets.copy():
                 if bullet.rect.bottom <= 0:
                     self.bullets.remove(bullet)
-            #print(len(self.bullets))
+            # print(len(self.bullets))
 
     def _check_events(self):
         """Respond to keypresses and mouse events"""
@@ -86,6 +86,7 @@ class AlienInvasion:
         self.ship.blitme()
         pygame.display.flip()
         self.clock.tick(60)
+
 
 if __name__ == '__main__':
     # Make a game instance, and run the game
